@@ -16,11 +16,7 @@
     "animated svg"
   ],
   "author": "Miriam Zusin <miriam.zusin@gmail.com>",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all"
-  ],
+  "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/mzusin/stripes-maker.git"
