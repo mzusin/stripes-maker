@@ -7,12 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "stripe",
     "stripes",
     "pattern",
-    "SVG",
+    "patterns",
+    "svg",
+    "svg animations",
     "knitting",
+    "knitting pattern",
     "crochet",
+    "crochet pattern",
     "animated svg"
   ],
   "author": "Miriam Zusin <miriam.zusin@gmail.com>",
