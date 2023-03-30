@@ -1,0 +1,28 @@
+{
+  "name": "stripes-maker",
+  "version": "1.0.0",
+  "description": "Node.js stripe pattern generator and maker. It can create multi-line static and animated SVG stripe patterns.",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stripe",
+    "stripes",
+    "pattern",
+    "SVG",
+    "knitting",
+    "crochet",
+    "animated svg"
+  ],
+  "author": "Miriam Zusin <miriam.zusin@gmail.com>",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzusin/stripes-maker.git"
+  }
+}
