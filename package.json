@@ -8,7 +8,7 @@
     "start": "ts-node-esm ./src/index.ts"
   },
   "bin": {
-    "aaa": "./bin/aaa.js"
+    "svg-stripes-maker": "./bin/cli.js"
   },
   "keywords": [
     "stripes",
