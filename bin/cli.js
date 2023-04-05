@@ -11,13 +11,16 @@ const absSrcFile = path.join(__dirname, '../src/index.ts');
 
 const cmd = spawn('node', [absEsmPath, absSrcFile]);
 cmd.stdout.on('data', function (data) {
-    console.log('stdout: ' + data.toString());
+    if(!data) return;
+    console.log(data.toString());
 });
 
 cmd.stderr.on('data', function (data) {
-    console.log('stderr: ' + data.toString());
+    if(!data) return;
+    console.log(data.toString());
 });
 
+/*
 cmd.on('exit', function (code) {
-    console.log('child process exited with code ' + code.toString());
-});
+    console.log('Done.');
+});*/

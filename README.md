@@ -1,4 +1,4 @@
-# Stripes Maker 🎨
+# ミ☆ Stripes Maker ☆彡
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/mzusin/stripes-maker)
 
