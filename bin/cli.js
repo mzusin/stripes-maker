@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const absEsmPath = path.join(__dirname, '../node_modules/ts-node/dist/bin-esm.js');
 const absSrcFile = path.join(__dirname, '../src/index.ts');
 
-const cmd = spawn('node', [absEsmPath, absSrcFile]);
+const cmd = spawn('node', [absEsmPath, absSrcFile, ...process.argv.slice(2)]);
 cmd.stdout.on('data', function (data) {
     if(!data) return;
     console.log(data.toString());

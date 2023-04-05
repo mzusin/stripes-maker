@@ -1,7 +1,7 @@
 import path from 'path';
 import fse from 'fs-extra';
 import chalk from 'chalk';
-import { Command } from 'commander';
+import { Command } from 'commander'; // https://github.com/tj/commander.js
 import { initSVGNode } from './svg-provider-node.js';
 import { addSVGBackgroundStripes } from './bg-svg-stripes.js';
 
