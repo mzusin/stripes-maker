@@ -6,10 +6,11 @@ import { createStripesSVG } from './main/stripes-provider.js';
 import { ISettings } from './interfaces';
 import { getSVGAsString } from 'mz-svg';
 import { saveSVG } from 'mz-svg';
+import config from '../stripes.config.js';
 
-const perform = (props: ISettings) => {
+const perform = () => {
 
-    console.log(chalk.blue('Stripes Maker'));
+/*    console.log(chalk.blue('Stripes Maker'));
     console.log(`- Output file = ${ chalk.bold(props.out) } 
 - SVG width = ${ chalk.bold(props.width) }   
 - SVG height = ${ chalk.bold(props.height) }  
@@ -17,18 +18,20 @@ const perform = (props: ISettings) => {
 - Line color = ${ chalk.bold(props.lineColor) } 
 - Line width = ${ chalk.bold(props.lineWidth) } 
 - Line distance = ${ chalk.bold(props.lineDistance) } 
-- Line rotation = ${ chalk.bold(props.lineRotation) }`);
+- Line rotation = ${ chalk.bold(props.lineRotation) }`);*/
 
     // create the main SVG with stripes
-    const $svg = createStripesSVG(props);
+    const settings = config as ISettings;
+    const $svg = createStripesSVG(settings);
 
     // generate a final svg string
     const svgString = getSVGAsString($svg);
-    // console.log(svgString)
+    console.log(svgString)
 
     // save the SVG file ------------
+    const targetFilePath = path.join(getRootFolder(), settings.out);
     saveSVG({
-        absOutFilePath: props.out,
+        absOutFilePath: targetFilePath,
         svgString,
     });
 
@@ -67,10 +70,11 @@ const init = () => {
             const lineDistance = Number(options.lineDistance) || 5;
             const lineRotation = Number(options.lineRotation) || 0;
 
-            const targetFilePath = path.join(getRootFolder(), out);
-
             // perform the main task ------------------------------------
-            perform({
+            perform();
+
+            /*
+            {
                 out: targetFilePath,
                 width,
                 height,
@@ -79,7 +83,8 @@ const init = () => {
                 lineWidth,
                 lineDistance,
                 lineRotation
-            });
+            }
+             */
         });
 
     program.parse(process.argv);

@@ -40,6 +40,6 @@
   },
   "dependencies": {
     "mz-math": "^3.0.4",
-    "mz-svg": "^1.0.8"
+    "mz-svg": "^1.0.9"
   }
 }
