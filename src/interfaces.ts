@@ -1,6 +1,6 @@
 export interface IStripe {
     color: string;
-    width: number;
+    size: number;
 }
 
 export interface ISettings{

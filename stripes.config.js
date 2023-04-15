@@ -7,19 +7,19 @@ const config = {
     stripes: [
         {
             color: '#505050',
-            width: 20,
+            size: 20,
         },
         {
             color: '#92CBFA',
-            width: 10,
+            size: 10,
         },
         {
             color: '#AB3C83',
-            width: 20,
+            size: 20,
         },
         {
             color: '#ffffff',
-            width: 10,
+            size: 10,
         }
     ],
     animationType: 4,

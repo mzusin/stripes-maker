@@ -17,20 +17,20 @@ const getStripes = (stripes: IStripe[], doc: Document) : SVGRectElement[] => {
     let sum = 0;
 
     for(let i=0; i<stripes.length; i++){
-        const { color, width } = stripes[i];
+        const { color, size } = stripes[i];
 
         const $rect = createRect({
             x: 0,
             y: sum,
             width: '100%',
-            height: width,
+            height: size,
             fill: color,
             document: doc,
         });
 
         res.push($rect);
 
-        sum += width;
+        sum += size;
     }
 
     return res;
@@ -58,7 +58,7 @@ export const createStripesSVG = (props: ISettings) => {
     // create stripes pattern and add it to <defs> ------------
     const patternID = `pattern-${ newId() }`;
 
-    const size = props.stripes.reduce((prev, stripe) => prev + stripe.width, 0);
+    const size = props.stripes.reduce((prev, stripe) => prev + stripe.size, 0);
     const isRotateAnimation =
         props.animationType === AnimationTypeEnum.RotateClockWise ||
         props.animationType === AnimationTypeEnum.RotationCounterClockwise;
