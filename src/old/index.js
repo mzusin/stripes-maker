@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'path.js';
 import fse from 'fs-extra';
 import chalk from 'chalk';
 import { Command } from 'commander'; // https://github.com/tj/commander.js

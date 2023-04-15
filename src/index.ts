@@ -1,51 +1,39 @@
-import { Command } from 'commander'; // https://github.com/tj/commander.js
 import * as path from 'path';
-import { getRootFolder, getVersion } from './io.js';
 import chalk from 'chalk';
+import { Command } from 'commander'; // https://github.com/tj/commander.js
+import { getRootFolder, getVersion } from './main/io.js';
+import { createStripesSVG } from './main/stripes-provider.js';
+import { ISettings } from './interfaces';
+import { getSVGAsString } from 'mz-svg';
+import { saveSVG } from 'mz-svg';
 
-const perform = (
-    out: string,
-    width: number,
-    height: number,
-    bgColor: string,
-    lineColor: string,
-    lineWidth: number,
-    lineDistance: number,
-    lineRotation: number
-) => {
+const perform = (props: ISettings) => {
 
     console.log(chalk.blue('Stripes Maker'));
-    console.log(`- Output file = ${ chalk.bold(out) } 
-- SVG width = ${ chalk.bold(width) }   
-- SVG height = ${ chalk.bold(height) }  
-- SVG Background color = ${ chalk.bold(bgColor) } 
-- Line color = ${ chalk.bold(lineColor) } 
-- Line width = ${ chalk.bold(lineWidth) } 
-- Line distance = ${ chalk.bold(lineDistance) } 
-- Line rotation = ${ chalk.bold(lineRotation) }`);
+    console.log(`- Output file = ${ chalk.bold(props.out) } 
+- SVG width = ${ chalk.bold(props.width) }   
+- SVG height = ${ chalk.bold(props.height) }  
+- SVG Background color = ${ chalk.bold(props.bgColor) } 
+- Line color = ${ chalk.bold(props.lineColor) } 
+- Line width = ${ chalk.bold(props.lineWidth) } 
+- Line distance = ${ chalk.bold(props.lineDistance) } 
+- Line rotation = ${ chalk.bold(props.lineRotation) }`);
 
-    /*
-    // create svg
-    const { $svg, document } = initSVGNode(width, height);
-
-    const $g = addSVGBackgroundStripes(
-        document,
-        $svg,
-        bgColor, width, height,
-        'main-pattern',
-        lineWidth, lineDistance, lineColor, lineRotation
-    );
-
-    $svg.append($g);
+    // create the main SVG with stripes
+    const $svg = createStripesSVG(props);
 
     // generate a final svg string
-    const svgString = '<?xml version="1.0" encoding="UTF-8"?>\n' + $svg.outerHTML;
+    const svgString = getSVGAsString($svg);
+    // console.log(svgString)
 
-    // save the SVG file
-    saveAbsFile(svgString, out);
+    // save the SVG file ------------
+    saveSVG({
+        absOutFilePath: props.out,
+        svgString,
+    });
 
-    // done message
-    console.log(chalk.green('Done.'));*/
+    // done message ----------------
+    console.log(chalk.green('Done.'));
 };
 
 const init = () => {
@@ -81,9 +69,9 @@ const init = () => {
 
             const targetFilePath = path.join(getRootFolder(), out);
 
-            // perform the main task
-            perform(
-                targetFilePath,
+            // perform the main task ------------------------------------
+            perform({
+                out: targetFilePath,
                 width,
                 height,
                 bgColor,
@@ -91,7 +79,7 @@ const init = () => {
                 lineWidth,
                 lineDistance,
                 lineRotation
-            );
+            });
         });
 
     program.parse(process.argv);
