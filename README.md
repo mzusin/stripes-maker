@@ -9,7 +9,7 @@ Node.js stripe pattern generator and maker. It can create multi-line static and 
 ## Table of Contents
 - [How to use](#how-to-use)
 - [stripes.config.js](#stripesconfigjs)
-- [Animation Types](#animation-types)
+- [Animation types](#animation-types)
 - [How to run from another folder](#how-to-run-from-another-folder)
 
 ## How to use
@@ -23,11 +23,17 @@ This is an example stripes configuration file that will create an SVG file with 
 
 ```js
 const config = {
-    out: './out/example.svg',
-    width: 300,
-    height: 300,
-    bgColor: '#fff',
-    lineRotation: 45,
+    out: './out/example.svg', // the pass to the output file
+    width: 300, // SVG width
+    height: 300, // SVG height
+    bgColor: '#fff', // SVG background color
+    lineRotation: 45, // stripes rotation angle in degrees
+
+    // optional animation -----------
+    animationType: 4, // linear animation - see types list below
+    animationDuration: 30, // seconds
+    
+    // the list of stripes ----------
     stripes: [
         {
             color: '#505050',
@@ -45,9 +51,7 @@ const config = {
             color: '#ffffff',
             size: 10,
         }
-    ],
-    animationType: 4, // linear animation
-    animationDuration: 30, // seconds
+    ]
 };
 ```
 
@@ -63,12 +67,12 @@ There are four possible types of animation that can be specified in the configur
 
 The script can also be run globally using the following command:
 
-```shell
+```cmd
 stripes-maker
 ```
 
 You can also pass another configuration file:
 
-```shell
+```cmd
 stripes-maker another.config.js
 ```

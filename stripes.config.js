@@ -1,9 +1,15 @@
 const config = {
-    out: './out/example.svg',
-    width: 300,
-    height: 300,
-    bgColor: '#fff',
-    lineRotation: 45,
+    out: './out/example.svg',  // the pass to the output file
+    width: 300, // SVG width
+    height: 300, // SVG height
+    bgColor: '#fff', // SVG background color
+    lineRotation: 45, // stripes rotation angle in degrees
+
+    // optional animation -----------
+    animationType: 4, // linear animation - see types list below
+    animationDuration: 30, // seconds
+
+    // the list of stripes ----------
     stripes: [
         {
             color: '#505050',
@@ -21,9 +27,7 @@ const config = {
             color: '#ffffff',
             size: 10,
         }
-    ],
-    animationType: 4, // linear animation
-    animationDuration: 30, // seconds
+    ]
 };
 
 /*
