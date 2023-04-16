@@ -17,7 +17,7 @@ const DownloadButton = (props: IDownloadButton) => {
     return (
         <button
             type="button"
-            className="bg-blue-500 text-gray-100 rounded-full px-10 py-6 text-xl"
+            className="bg-sky-800 text-gray-100 rounded-full px-10 py-5 text-xl mt-8"
             onClick={ downloadHandler }>Download SVG</button>
     )
 };

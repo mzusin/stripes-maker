@@ -1,6 +1,7 @@
 import React from 'react';
 import Badge from '../Badge';
 import Range from './range/Range';
+import { convertRange } from 'mz-math';
 
 interface IFormRangeControl {
     title: string,
@@ -13,14 +14,6 @@ interface IFormRangeControl {
 }
 
 /**
- * scale a range [min,max] to [a,b]
- * f(x) = (b - a) * (x - min) / (max - min) + a
- */
-const convertRange = (min: number, max: number, a: number, b: number, x: number) => {
-    return (b - a) * (x - min) / (max - min) + a;
-}
-
-/**
  * Range Control.
  */
 const FormRangeControl = (props: IFormRangeControl) => {
@@ -29,7 +22,7 @@ const FormRangeControl = (props: IFormRangeControl) => {
 
     return (
         <div className="flex flex-col mb-4 w-full">
-            <div className="mb-2 flex items-center">
+            <div className="mb-4 flex items-center">
                 <span>{ title }</span>
                 <Badge text={ `${ value }${ units }` } />
             </div>
@@ -37,9 +30,9 @@ const FormRangeControl = (props: IFormRangeControl) => {
             <Range
                 rootClasses="relative h-1"
                 pointerClasses="range-pointer-theme-1"
-                value={ convertRange(min, max, 0, 100, value) }
+                value={ convertRange(value, min, max, 0, 100) }
                 onChangeCallback={ (updatedValue: number) => {
-                    const converted = convertRange(0, 100, min, max, updatedValue);
+                    const converted = Math.round(convertRange(updatedValue, 0, 100, min, max));
                     onChange(converted);
                 } }>
 
