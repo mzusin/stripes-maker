@@ -1,0 +1,26 @@
+.range-pointer{
+    width: 8px;
+    height: 8px;
+    margin-top: 1px;
+    transform: translateX(-4px);
+    box-shadow: rgb(0 0 0 / 60%) 0 0 2px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: 1px solid rgba(224, 224, 224, 0.5);
+}
+
+.range-pointer-theme-1{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    transform: translateX(-7px);
+    box-shadow: rgb(0 0 0 / 60%) 0 0 2px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: 1px solid rgba(224, 224, 224, 0.5);
+    margin-top: -5px;
+}
+
+.range-slider{
+    touch-action: none;
+}

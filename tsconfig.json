@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "module": "es2022",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react"
   }
 }
