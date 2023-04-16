@@ -44,3 +44,11 @@ const config = {
     animationDuration: 30, // seconds
 };
 ```
+
+## Animation Type
+There are four possible types of animation that can be specified in the configuration file.
+
+- NoAnimation = 1,
+- RotateClockWise = 2,
+- RotationCounterClockwise = 3,
+- Linear = 4,
