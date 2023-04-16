@@ -4,6 +4,8 @@
 
 Node.js stripe pattern generator and maker. It can create multi-line static and animated SVG stripe patterns.
 
+![example.svg](https://raw.githubusercontent.com/mzusin/stripes-maker/main/img/example.svg)
+
 ## How to use
 1. Install the module using npm: `npm install stripes-maker`
 2. Edit [stripes.config.js](https://github.com/mzusin/stripes-maker/blob/main/stripes.config.js) file.
