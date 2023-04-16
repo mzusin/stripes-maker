@@ -6,7 +6,7 @@ interface IBadge {
 
 const Badge = (props: IBadge) => {
     return (
-        <span className="flex items-center mx-4 bg-green-100 text-xs py-1 px-2 rounded text-slate-900">{ props.text }</span>
+        <span className="flex items-center mx-4 bg-slate-300 text-xs py-1 px-2 rounded text-slate-900">{ props.text }</span>
     )
 };
 

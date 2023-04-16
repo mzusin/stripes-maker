@@ -62,7 +62,7 @@ const App = () => {
                 </header>
 
                 <section className="container mx-auto my-8 px-4">
-                    <div className="flex flex-col xl:flex-row gap-8 mb-8">
+                    <div className="flex flex-col xl:flex-row gap-8 mb-20">
 
                         <div className="flex-1 order-2 xlg:order-1">
                             <Form />

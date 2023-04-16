@@ -55,7 +55,7 @@ const Form = () => {
                     stripes.map((stripe, i) => {
 
                         return (
-                           <div key={ `stripe-${i}` } className="px-4 py-2 bg-gray-50">
+                           <div key={ `stripe-${i}` } className="px-4 py-2 bg-slate-800 text-slate-100">
 
                               <div className="flex justify-between items-start">
 
