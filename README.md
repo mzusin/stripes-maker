@@ -6,6 +6,6 @@ Node.js stripe pattern generator and maker. It can create multi-line static and 
 
 ## How to use
 1. Install the module using npm: `npm install stripes-maker`
-2. Edit **stripes.config.js** file.
+2. Edit [https://github.com/mzusin/stripes-maker/blob/main/stripes.config.js](stripes.config.js) file.
 3. Run `npm start`
-4. The output SVG file will be located in the **'./out/'** folder.
+4. The output SVG file will be in the **'./out/'** folder.
