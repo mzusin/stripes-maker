@@ -1,6 +1,6 @@
 {
   "name": "stripes-maker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js stripe pattern generator and maker. It can create multi-line static and animated SVG stripe patterns.",
   "type": "module",
   "scripts": {
