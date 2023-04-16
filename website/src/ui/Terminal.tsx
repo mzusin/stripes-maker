@@ -50,7 +50,7 @@ const Terminal = (props: ITerminal) => {
 
     return (
         <div className="text-gray-200 text-sm rounded overflow-hidden flex flex-col">
-            <div className="bg-slate-900 px-4 py-2 relative flex items-center">
+            <div className="bg-slate-600 px-4 py-2 relative flex items-center">
                 <ul className="flex absolute">
                     <li className="bg-red-500 rounded-full w-2.5 h-2.5 mr-2" />
                     <li className="bg-amber-400 rounded-full w-2.5 h-2.5 mr-2" />
@@ -62,7 +62,7 @@ const Terminal = (props: ITerminal) => {
                     className="absolute right-5 bg-blue-300 text-gray-900 text-xs px-4 py-0.5 rounded"
                     onClick={ copyToClipboard }>Copy</button>
             </div>
-            <div className="bg-slate-800 p-4 flex-1">
+            <div className="bg-black p-6 flex-1">
                 <pre>
                     <code className="break-space" dangerouslySetInnerHTML={{ __html: getFormattedSVGString() }} />
                 </pre>

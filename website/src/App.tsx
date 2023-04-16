@@ -57,44 +57,50 @@ const App = () => {
 
                 <TopBar />
 
-                <header className="font-helvetica mt-6 mb-12 mx-4 text-center">
-                    <h1 className="text-5xl md:text-7xl mb-4">SVG STRIPES MAKER</h1>
-                </header>
+                <div className="bg-black pt-8 pb-10">
 
-                <section className="container mx-auto my-8 px-4">
-                    <div className="flex flex-col xl:flex-row gap-8 mb-20">
+                    <header className="font-helvetica mt-10 mb-12 mx-4 text-center">
+                        <h1 className="text-5xl md:text-7xl mb-4">SVG STRIPES MAKER</h1>
+                    </header>
 
-                        <div className="flex-1 order-2 xlg:order-1">
-                            <Form />
-                        </div>
+                    <section className="container mx-auto my-8 px-4">
+                        <div className="flex flex-col xl:flex-row gap-8 mb-20">
 
-                        <div className="flex flex-col items-center order-1 xl:order-2">
-                            <div className="preview flex items-center justify-center bg-gray-100 border overflow-hidden max-w-full p-12">
-                                <StripesSvg
-                                    id={ 'stripes-pattern-main' }
-                                    stripes={ stripes }
-                                    lineRotation={ lineRotation }
-                                    animationType={ animationType }
-                                    animationDuration={ animationDuration }
-                                />
+                            <div className="flex-1 order-2 xlg:order-1">
+                                <Form />
                             </div>
 
-                            <div className="flex items-center justify-center my-6">
-                                <DownloadButton svg={ svgString } />
+                            <div className="flex flex-col items-center order-1 xl:order-2">
+                                <div className="preview flex items-center justify-center bg-gray-100 border overflow-hidden max-w-full p-12">
+                                    <StripesSvg
+                                        id={ 'stripes-pattern-main' }
+                                        stripes={ stripes }
+                                        lineRotation={ lineRotation }
+                                        animationType={ animationType }
+                                        animationDuration={ animationDuration }
+                                    />
+                                </div>
+
+                                <div className="flex items-center justify-center my-6">
+                                    <DownloadButton svg={ svgString } />
+                                </div>
                             </div>
+
+                        </div>
+                    </section>
+                </div>
+
+                <div className="bg-slate-900 pt-10">
+
+                    <section className="container mx-auto my-8 px-4">
+                        <div className="grid lg:grid-cols-2 gap-8">
+                            <Terminal title="SVG Code" content={ svgString }/>
+                            <Terminal title="Ready for CSS" content={ cssBackgroundImageString }/>
                         </div>
 
-                    </div>
-
-                    <div className="grid lg:grid-cols-2 gap-8">
-                        <Terminal title="SVG Code" content={ svgString }/>
-                        <Terminal title="Ready for CSS" content={ cssBackgroundImageString }/>
-                    </div>
-
-                    <StripesVariants />
-                </section>
-
-                <div className="stripes-bg h-8 w-full mt-20"></div>
+                        <StripesVariants />
+                    </section>
+                </div>
 
                 <BottomDescription />
 

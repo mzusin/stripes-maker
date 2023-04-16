@@ -2,14 +2,16 @@ import React from "react";
 
 const BottomDescription = () => {
     return (
-        <>
-            <section className="text-center mb-10 bg-green-900 py-20 font-open-sans">
+        <div className="bg-sky-900" style={{
+            background: '#112f4a',
+        }}>
+            <section className="text-center pt-20 pb-14 font-open-sans">
                 <h3 className="text-3xl md:text-4xl px-4 mb-6">Animated Stripe Pattern Generator Tool</h3>
                 <h4 className="text-xl md:text-2xl mb-2">A free tool for the web design community</h4>
                 <p>SVG Stripe Maker is a design tool to create the tiles for striped background.</p>
             </section>
 
-            <section className="mb-10 container mx-auto">
+            <section className="pb-10 container mx-auto">
                 <div className="grid gap-8 lg:grid-cols-2 text-lg px-4">
                     <div className="mb-8">
                         <h4 className="mb-4 font-bold">Features</h4>
@@ -77,15 +79,14 @@ const BottomDescription = () => {
                             </li>
                             <li className="mb-2 flex items-center">
                                 <img src="img/icons/check-icon.svg" alt="" />
-                                    <span className="ml-2">Can be used as stylecraft stripe generator</span>
+                                    <span className="ml-2">Can be used as style craft stripe generator</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <div className="stripes-bg-bottom-2 h-10 w-full mt-4 md:mt-20 border-t-8 border-t-gray-700 mb-8"></div>
-        </>
+        </div>
     )
 };
 
