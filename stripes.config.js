@@ -22,7 +22,7 @@ const config = {
             size: 10,
         }
     ],
-    animationType: 4,
+    animationType: 4, // linear animation
     animationDuration: 30, // seconds
 };
 

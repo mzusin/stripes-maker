@@ -6,6 +6,12 @@ Node.js stripe pattern generator and maker. It can create multi-line static and 
 
 ![example.svg](https://raw.githubusercontent.com/mzusin/stripes-maker/main/img/example.svg)
 
+## Table of Contents
+- [How to use](#how-to-use)
+- [stripes.config.js](#stripesconfigjs)
+- [Animation Types](#animation-types)
+- [How to run from another folder](#how-to-run-from-another-folder)
+
 ## How to use
 1. Install the module using npm: `npm install stripes-maker`
 2. Edit [stripes.config.js](https://github.com/mzusin/stripes-maker/blob/main/stripes.config.js) file.
@@ -40,15 +46,29 @@ const config = {
             size: 10,
         }
     ],
-    animationType: 4,
+    animationType: 4, // linear animation
     animationDuration: 30, // seconds
 };
 ```
 
-## Animation Type
+## Animation Types
 There are four possible types of animation that can be specified in the configuration file.
 
-- NoAnimation = 1,
-- RotateClockWise = 2,
-- RotationCounterClockwise = 3,
-- Linear = 4,
+- NoAnimation = 1
+- RotateClockWise = 2
+- RotationCounterClockwise = 3
+- Linear = 4
+
+## How to run from another folder
+
+The script can also be run globally using the following command:
+
+```shell
+stripes-maker
+```
+
+You can also pass another configuration file:
+
+```shell
+stripes-maker another.config.js
+```
