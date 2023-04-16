@@ -1,5 +1,5 @@
 const config = {
-    out: 'test.svg',
+    out: './out/example.svg',
     width: 300,
     height: 300,
     bgColor: '#fff',
