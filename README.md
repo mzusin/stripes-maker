@@ -11,3 +11,36 @@ Node.js stripe pattern generator and maker. It can create multi-line static and 
 2. Edit [stripes.config.js](https://github.com/mzusin/stripes-maker/blob/main/stripes.config.js) file.
 3. Run `npm start`
 4. The output SVG file will be in the **'./out/'** folder.
+
+## stripes.config.js
+This is an example stripes configuration file that will create an SVG file with four stripes.
+
+```js
+const config = {
+    out: './out/example.svg',
+    width: 300,
+    height: 300,
+    bgColor: '#fff',
+    lineRotation: 45,
+    stripes: [
+        {
+            color: '#505050',
+            size: 20,
+        },
+        {
+            color: '#92CBFA',
+            size: 10,
+        },
+        {
+            color: '#AB3C83',
+            size: 20,
+        },
+        {
+            color: '#ffffff',
+            size: 10,
+        }
+    ],
+    animationType: 4,
+    animationDuration: 30, // seconds
+};
+```
