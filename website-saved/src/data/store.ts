@@ -1,16 +1,16 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import rootSlice from './root-slice';
+import formSlice from './slices/form-slice';
 
 const reducer = combineReducers({
-    root: rootSlice.reducer,
+    form: formSlice.reducer,
 });
 
 const store = configureStore({
     reducer,
 })
 
-export const rootActions = rootSlice.actions;
+export const formActions = formSlice.actions;
 export default store;
 
 /**

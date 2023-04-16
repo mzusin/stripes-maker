@@ -2,18 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.preview{
-    width: 600px;
-    height: 350px;
+/**
+ * SVG Preview.
+ */
+.preview {
+    height: 270px;
+    width: 500px;
 }
 
-.break-space{
-    white-space: break-spaces;
-    word-break: break-all;
-}
-
-.animation-radio-buttons :checked + div{
-    @apply bg-blue-100 rounded;
+.preview svg {
+    border: 3px solid #efefef;
 }
 
 @media (prefers-reduced-motion: no-preference){
