@@ -5,6 +5,14 @@ import { Provider } from 'react-redux';
 import store from './data/store';
 import App from './App';
 
+declare global {
+    namespace JSX {
+        interface IntrinsicElements {
+            'toolcool-color-picker': any;
+        }
+    }
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

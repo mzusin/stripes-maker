@@ -7,7 +7,6 @@ import StripesVariants from './ui/StripesVariants';
 import { useAppSelector } from './data/store';
 import { renderToString } from 'react-dom/server';
 import TopBar from './ui/TopBar';
-import Footer from './ui/Footer';
 import Description from './ui/download-source-code/Description';
 import { svgToBackgroundImage } from './domain/svg-provider';
 
@@ -99,8 +98,6 @@ const App = () => {
 
                 <Description />
             </div>
-
-            <Footer />
 
             {/* https://fkhadra.github.io/react-toastify/introduction/ */}
             <ToastContainer

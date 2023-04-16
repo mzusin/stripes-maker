@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { getFormFieldId } from '../../domain/form-provider';
 import Badge from '../Badge';
-import ColorPicker from './color-picker/ColorPicker';
 import { IColor } from '../../data/slices/form-slice';
-// import tinycolor from 'tinycolor2';
+import 'toolcool-color-picker';
+import { rgbaColorToString } from '../../domain/color-provider';
 
 interface IFormColorControl {
     title: string,
@@ -20,35 +20,41 @@ const FormColorControl = (props: IFormColorControl) => {
 
     const { title, rgbaColor, onChange } = props;
 
-    /*const getBadgeColor = () => {
-        const color = tinycolor({ r: rgbaColor.r, g: rgbaColor.g, b: rgbaColor.b, a: rgbaColor.a });
+    const colorPickerRef = useRef<HTMLElement>();
 
-        if(rgbaColor.a >= 1){
-            return color.toHexString();
-        }
+    useEffect(() => {
 
-        return color.toHex8String();
-    };*/
+        const colorPicker = colorPickerRef.current;
+
+        const onColorChange = (evt: Event) => {
+            const customEvent = evt as CustomEvent;
+            onChange(customEvent.detail.color.toRgb());
+        };
+
+        colorPicker?.addEventListener('change', onColorChange);
+
+        return () => {
+            colorPicker?.removeEventListener('change', onColorChange);
+        };
+    }, []);
 
     return (
-        <Fragment>
-            {
-                /*
-                <div className="flex flex-col mb-4">
+        <div className="flex flex-col mb-4">
             <label htmlFor={ id } className="mb-2">{ title }</label>
             <div className="flex">
-                <ColorPicker
+                <toolcool-color-picker
+                    color={ rgbaColorToString(rgbaColor) }
+                    ref={ colorPickerRef }
+                />
+                {/*<ColorPicker
                     {...rgbaColor}
                     onChange={ (updateColor: IColor) => {
                         onChange(updateColor);
                     }}
-                />
-                <Badge text={ getBadgeColor() } />
+                />*/}
+                <Badge text={ rgbaColorToString(rgbaColor) } />
             </div>
         </div>
-                 */
-            }
-        </Fragment>
     )
 };
 

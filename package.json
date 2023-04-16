@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "mz-math": "^3.0.4",
-    "mz-svg": "^1.0.9"
+    "mz-svg": "^1.0.9",
+    "toolcool-color-picker": "^1.0.14"
   }
 }
