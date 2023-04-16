@@ -4,8 +4,8 @@
   "description": "Node.js stripe pattern generator and maker. It can create multi-line static and animated SVG stripe patterns.",
   "type": "module",
   "scripts": {
-    "make": "node ./bin/cli.js stripes.config.js",
-    "start": "ts-node-esm ./src/index.ts"
+    "start": "ts-node-esm ./src/index.ts stripes.config.js",
+    "make": "node ./bin/cli.js stripes.config.js"
   },
   "bin": {
     "stripes-maker": "./bin/cli.js"
