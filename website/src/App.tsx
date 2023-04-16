@@ -7,12 +7,12 @@ import StripesVariants from './ui/StripesVariants';
 import { useAppSelector } from './data/store';
 import { renderToString } from 'react-dom/server';
 import TopBar from './ui/TopBar';
-import Description from './ui/download-source-code/Description';
 import { svgToBackgroundImage } from './domain/svg-provider';
 
 // https://fkhadra.github.io/react-toastify/introduction/
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BottomDescription from './ui/BottomDescription';
 
 /**
  * SVG Stripes Maker.
@@ -96,7 +96,8 @@ const App = () => {
 
                 <div className="stripes-bg h-8 w-full mt-20"></div>
 
-                <Description />
+                <BottomDescription />
+
             </div>
 
             {/* https://fkhadra.github.io/react-toastify/introduction/ */}
