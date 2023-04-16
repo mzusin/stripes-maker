@@ -1,3 +1,4 @@
+import React from 'react';
 import { AnimationTypeEnum } from '../enums/AnimationTypeEnum';
 import { IStripe } from '../data/slices/form-slice';
 

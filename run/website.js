@@ -1,6 +1,7 @@
 import esbuild from 'esbuild';
 import { settings } from './settings.js';
 import esbuildWatchPlugin from './esbuild-plugins/esbuild-watch-plugin.js';
+import pcssPlugin from './esbuild-plugins/esbuild-pcss-plugin.js';
 import { newId } from 'mz-math';
 import fs from 'fs';
 import path from 'path';
@@ -21,11 +22,12 @@ const buildSAssets = () => {
 
     const args = process.argv.slice(2);
     const watch = args.length > 1 && args[1].trim().toLowerCase() === 'watch';
+    settings.plugins = [ pcssPlugin ];
 
     if(watch){
         // ------------- watch ---------------
         (async () => {
-            settings.plugins = [esbuildWatchPlugin];
+            settings.plugins = [pcssPlugin, esbuildWatchPlugin];
             const ctx = await esbuild.context(settings);
             await ctx.watch();
             console.log('Watching...');

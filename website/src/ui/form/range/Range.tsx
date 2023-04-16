@@ -1,8 +1,9 @@
 import './Range.css';
-import { MouseEvent, ReactNode, useCallback, useEffect, useRef } from 'react';
+import { Fragment, MouseEvent, ReactNode, useCallback, useEffect, useRef } from 'react';
 import RangePointer from './RangePointer';
-import { DebouncedFunc } from 'lodash-es';
-import throttle from 'lodash-es/throttle';
+import React from 'react';
+/*import { DebouncedFunc } from 'lodash-es';
+import throttle from 'lodash-es/throttle';*/
 
 interface IRange {
 
@@ -27,7 +28,7 @@ const Range = (props: IRange) => {
 
     const { onChangeCallback, rootClasses, children, value, pointerClasses } = props;
 
-    const dragThrottle = useRef<DebouncedFunc<any>>();
+    //const dragThrottle = useRef<DebouncedFunc<any>>();
 
     const performChange = useCallback(
         (evt: any) => {
@@ -47,7 +48,7 @@ const Range = (props: IRange) => {
             onChangeCallback(updatedValue);
         }, [onChangeCallback]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         dragThrottle.current = throttle((evt: any) => {
             performChange(evt);
         }, 50);
@@ -56,14 +57,14 @@ const Range = (props: IRange) => {
             if(!dragThrottle || !dragThrottle.current) return;
             dragThrottle.current.cancel();
         };
-    }, [performChange]);
+    }, [performChange]);*/
 
-    const onMouseUp = () => {
+    /*const onMouseUp = () => {
         window.removeEventListener('mousemove', onValueChange);
         window.removeEventListener('mouseup', onValueChange);
-    };
+    };*/
 
-    const onMouseDown = (evt: MouseEvent) => {
+    /*const onMouseDown = (evt: MouseEvent) => {
 
         if(evt.preventDefault){
             evt.preventDefault();
@@ -72,15 +73,17 @@ const Range = (props: IRange) => {
         onValueChange(evt);
         window.addEventListener('mousemove', onValueChange);
         window.addEventListener('mouseup', onMouseUp);
-    };
+    };*/
 
-    const onValueChange = (evt: any) => {
+    /*const onValueChange = (evt: any) => {
         if(!dragThrottle || !dragThrottle.current) return;
         dragThrottle.current(evt);
-    };
+    };*/
 
     return (
-        <div
+        <Fragment>
+            {/*
+              <div
             ref={ rangeRef }
             onMouseDown={ onMouseDown }
             onMouseUp={ onMouseUp }
@@ -97,6 +100,8 @@ const Range = (props: IRange) => {
                 />
             </div>
         </div>
+            */}
+        </Fragment>
     )
 };
 

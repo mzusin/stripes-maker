@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { getFormFieldId } from '../../domain/form-provider';
 import Badge from '../Badge';
 import ColorPicker from './color-picker/ColorPicker';
 import { IColor } from '../../data/slices/form-slice';
-import tinycolor from 'tinycolor2';
+// import tinycolor from 'tinycolor2';
 
 interface IFormColorControl {
     title: string,
@@ -20,7 +20,7 @@ const FormColorControl = (props: IFormColorControl) => {
 
     const { title, rgbaColor, onChange } = props;
 
-    const getBadgeColor = () => {
+    /*const getBadgeColor = () => {
         const color = tinycolor({ r: rgbaColor.r, g: rgbaColor.g, b: rgbaColor.b, a: rgbaColor.a });
 
         if(rgbaColor.a >= 1){
@@ -28,10 +28,13 @@ const FormColorControl = (props: IFormColorControl) => {
         }
 
         return color.toHex8String();
-    };
+    };*/
 
     return (
-        <div className="flex flex-col mb-4">
+        <Fragment>
+            {
+                /*
+                <div className="flex flex-col mb-4">
             <label htmlFor={ id } className="mb-2">{ title }</label>
             <div className="flex">
                 <ColorPicker
@@ -43,6 +46,9 @@ const FormColorControl = (props: IFormColorControl) => {
                 <Badge text={ getBadgeColor() } />
             </div>
         </div>
+                 */
+            }
+        </Fragment>
     )
 };
 
