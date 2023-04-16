@@ -2,6 +2,8 @@ import React from 'react';
 import { useAppSelector } from '../../data/store';
 import FormStripe from './form-stripe';
 import AddStripeBtn from './add-stripe-btn';
+import DownloadSvg from './download-svg';
+import ResetBtn from './reset-btn';
 
 const FormStripes = () => {
     const stripes = useAppSelector(store => store.root.stripes);
@@ -21,6 +23,10 @@ const FormStripes = () => {
             }
 
             <AddStripeBtn />
+
+            { stripes.length > 0 && <DownloadSvg /> }
+
+            <ResetBtn />
         </div>
     )
 };

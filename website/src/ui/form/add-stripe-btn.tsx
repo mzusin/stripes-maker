@@ -1,5 +1,5 @@
 import React from 'react';
-import { addStripe, deleteStripe } from '../../domain/stripes-data-provider';
+import { addStripe } from '../../domain/stripes-data-provider';
 import { rootActions, useAppDispatch, useAppSelector } from '../../data/store';
 
 const AddStripeBtn = () => {
