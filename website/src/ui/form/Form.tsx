@@ -55,9 +55,13 @@ const Form = () => {
                     stripes.map((stripe, i) => {
 
                         return (
-                           <div key={ `stripe-${i}` } className="px-4 py-2 bg-slate-800 text-slate-100">
+                           <div key={ `stripe-${i}` } className="px-6 py-2 bg-slate-800 text-slate-100 flex flex-col">
 
-                              <div className="flex justify-between items-start">
+                               <button type="button" className="ml-auto" onClick={ () => {
+                                   removeStripe(i);
+                               }}><CloseIcon /></button>
+
+                              <div className="flex">
 
                                   <FormColorControl
                                       title={ 'Color' }
@@ -69,23 +73,19 @@ const Form = () => {
                                       }}
                                   />
 
-                                  <button type="button" onClick={ () => {
-                                      removeStripe(i);
-                                  }}><CloseIcon /></button>
+                                  <FormRangeControl
+                                      title={ 'Width' }
+                                      value={ stripe.width }
+                                      min={ 1 }
+                                      max={ 300 }
+                                      units={ 'px'}
+                                      onChange={ (updatedValue: number) => {
+                                          const updatedStripe = {...stripe};
+                                          updatedStripe.width = updatedValue;
+                                          updateStripes(i, updatedStripe);
+                                      }}
+                                  />
                               </div>
-
-                               <FormRangeControl
-                                   title={ 'Width' }
-                                   value={ stripe.width }
-                                   min={ 1 }
-                                   max={ 300 }
-                                   units={ 'px'}
-                                   onChange={ (updatedValue: number) => {
-                                       const updatedStripe = {...stripe};
-                                       updatedStripe.width = updatedValue;
-                                       updateStripes(i, updatedStripe);
-                                   }}
-                               />
                            </div>
                        )
                     })

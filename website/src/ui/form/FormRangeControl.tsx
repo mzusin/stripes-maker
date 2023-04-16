@@ -28,7 +28,7 @@ const FormRangeControl = (props: IFormRangeControl) => {
     const { title, value, min, max, units, onChange } = props;
 
     return (
-        <div className="flex flex-col mb-4">
+        <div className="flex flex-col mb-4 w-full">
             <div className="mb-2 flex items-center">
                 <span>{ title }</span>
                 <Badge text={ `${ value }${ units }` } />

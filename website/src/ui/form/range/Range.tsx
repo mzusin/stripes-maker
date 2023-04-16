@@ -87,7 +87,7 @@ const Range = (props: IRange) => {
             onMouseUp={ onMouseUp }
             onTouchMove={ onValueChange }
             onTouchStart={ onValueChange }
-            className={ `range-slider relative h-2.5 ${ rootClasses ? rootClasses : '' }` }>
+            className={ `range-slider relative h-1.5 ${ rootClasses ? rootClasses : '' }` }>
             <div className="absolute w-full h-full">
 
                 { children }

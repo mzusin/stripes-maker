@@ -1,6 +1,5 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { getFormFieldId } from '../../domain/form-provider';
-import Badge from '../Badge';
 import { IColor } from '../../data/slices/form-slice';
 import 'toolcool-color-picker';
 import { rgbaColorToString } from '../../domain/color-provider';
@@ -39,21 +38,12 @@ const FormColorControl = (props: IFormColorControl) => {
     }, []);
 
     return (
-        <div className="flex flex-col mb-4">
+        <div className="flex flex-col mb-4 mr-12">
             <label htmlFor={ id } className="mb-2">{ title }</label>
-            <div className="flex">
-                <toolcool-color-picker
-                    color={ rgbaColorToString(rgbaColor) }
-                    ref={ colorPickerRef }
-                />
-                {/*<ColorPicker
-                    {...rgbaColor}
-                    onChange={ (updateColor: IColor) => {
-                        onChange(updateColor);
-                    }}
-                />*/}
-                <Badge text={ rgbaColorToString(rgbaColor) } />
-            </div>
+            <toolcool-color-picker
+                color={ rgbaColorToString(rgbaColor) }
+                ref={ colorPickerRef }
+            />
         </div>
     )
 };

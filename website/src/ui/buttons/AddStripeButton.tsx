@@ -27,7 +27,7 @@ const AddStripeButton = () => {
     return (
         <button
             type="button"
-            className="bg-green-200 text-gray-700 rounded-full px-6 py-2 mt-4 mx-4"
+            className="bg-slate-300 text-slate-900 rounded-full px-6 py-2 mt-4 mx-4"
             onClick={ addStripeHandler }>Add Stripe</button>
     )
 };
