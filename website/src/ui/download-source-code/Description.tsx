@@ -4,10 +4,6 @@ import Bullet from './Bullet';
 const Description = () => {
     return (
         <>
-            <section id="get-source-code" className="text-center mb-10 bg-green-50 py-20">
-                <h3 className="text-2xl md:text-4xl font-open-sans uppercase">Download the source code</h3>
-            </section>
-
             <section className="mb-10 container mx-auto">
                 <h3 className="mt-20 mb-12 text-2xl md:text-4xl font-open-sans text-center px-4">What's Included</h3>
                 <div className="grid lg:grid-cols-3 text-lg px-4">
@@ -71,12 +67,6 @@ const Description = () => {
                         </ul>
                     </div>
                 </div>
-            </section>
-
-            <section className="text-center bg-blue-100 py-20">
-                <h3 className="mb-8 text-2xl md:text-4xl font-open-sans">Ready to get started?</h3>
-                <p className="text-xl mb-12">Get the SVG Stripes Maker source code now, or <a href="mailto:jsoceandiver@gmail.com" title="" className="underline">contact us for more details</a>.</p>
-                <a href="/2-products/toolbox/svg-stripes-maker/svg-stripes-maker-react/public" title="" className="bg-red-500 text-white rounded-full px-12 py-5 text-xl inline-block">Buy Now</a>
             </section>
         </>
     )

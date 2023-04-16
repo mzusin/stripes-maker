@@ -292,7 +292,7 @@ const StripesVariants = () => {
     return (
         <div className="my-10">
             <h3 className="text-center mt-20 mb-10 text-2xl md:text-4xl font-open-sans">Select Predefined Stripe Themes</h3>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-8 md:my-8 shadow-lg shadow-slate-200 rounded p-4 md:p-10">
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-8 md:my-8 p-4 md:p-10">
                 {
                     variants.map(variant => {
                         return (

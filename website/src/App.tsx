@@ -55,11 +55,11 @@ const App = () => {
     return (
         <div className="min-h-screen flex flex-col">
             <div className="flex-1">
+
                 <TopBar />
 
                 <header className="font-helvetica mt-6 mb-12 mx-4 text-center">
                     <h1 className="text-5xl md:text-7xl mb-4">SVG STRIPES MAKER</h1>
-                    <h2 className="text-2xl md:text-4xl font-open-sans">Create and download SVG stripes online free.</h2>
                 </header>
 
                 <section className="container mx-auto my-8 px-4">

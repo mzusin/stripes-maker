@@ -48,14 +48,14 @@ const Form = () => {
     };
 
     return (
-        <div className="shadow-lg shadow-slate-200 rounded p-4">
+        <div>
 
-            <div className="grid lg:grid-cols-2 gap-4 mb-4">
+            <div className="grid lg:grid-cols-2 gap-4 mb-4 text-slate-900">
                 {
                     stripes.map((stripe, i) => {
 
                         return (
-                           <div key={ `stripe-${i}` } className="px-4 py-2 bg-gray-50 border rounded">
+                           <div key={ `stripe-${i}` } className="px-4 py-2 bg-gray-50">
 
                               <div className="flex justify-between items-start">
 

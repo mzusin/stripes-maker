@@ -22,7 +22,7 @@ const RadioButtonControls = () => {
     };
 
     return (
-        <div className="animation-radio-buttons px-4 py-3 bg-gray-50 border rounded">
+        <div className="animation-radio-buttons px-4 py-3 bg-gray-50 text-slate-900">
             <div className="mb-2">Animation</div>
             <div className="flex flex-wrap text-sm">
 

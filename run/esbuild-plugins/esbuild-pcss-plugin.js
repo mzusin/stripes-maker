@@ -16,6 +16,7 @@ const esbuildPcssPlugin = {
                 tailwindcss({
                     content: [
                         "./website/src/**/*.{js,jsx,ts,tsx}",
+                        "./website/index.html",
                     ],
                     theme: {
                         fontFamily: {
