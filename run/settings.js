@@ -18,13 +18,11 @@ export const settings = {
     outfile: './website/assets/index.min.js',
     banner: {
         js: `/* 
-ミ☆ Stripes Maker ☆彡
+ミ☆ Stripes Maker v${ version } ☆彡
 Node.js stripe pattern generator and maker. It can create multi-line static and animated SVG stripe patterns.
-Version: ${version}
-Author: Miriam Zusin     
-Contact: miriam.zusin@gmail.com
-Documentation: https://github.com/mzusin/stripes-maker
-Licensed GPLv3 for open source use, or Commercial License for commercial use - https://github.com/mzusin/index/blob/main/LICENSE.md                 
+https://github.com/mzusin/stripes-maker
+Licensed GPLv3 for open source use, or Commercial License for commercial use - https://github.com/mzusin/index/blob/main/LICENSE.md   
+Copyright (c) 2023-present, Miriam Zusin              
 */`,
     },
 };
